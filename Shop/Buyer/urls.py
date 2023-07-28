@@ -1,7 +1,7 @@
 from django.urls import path, include
-from Buyer.views import show_index_page, show_product_page
+from Buyer.views import show_product_page, show_index_page
 
 urlpatterns = [
-    path('', show_index_page),
-    path('product/<int:id>', show_product_page)
+    path('', show_index_page, name="index"),
+    path('product/<int:pk>', show_product_page, name="product_name")
 ]
